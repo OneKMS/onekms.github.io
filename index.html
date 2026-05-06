@@ -3,122 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OneKMS - One KMS for All Clouds</title>
+  <title>OneKMS – Encryption Key Observability</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.umd.js"></script>
-  <style>
-    .glow { filter: blur(120px); opacity: 0.25; }
-  </style>
 </head>
-<body class="bg-black text-white font-sans overflow-x-hidden">
 
-  <!-- Background Glow -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600 glow"></div>
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Navbar -->
-  <header class="flex justify-between items-center px-8 py-6 relative z-10">
-    <h1 class="text-xl font-bold tracking-wide">OneKMS</h1>
-    <button class="bg-white text-black px-4 py-2 rounded-lg hover:scale-105 transition">Get Early Access</button>
-  </header>
+<!-- NAVBAR -->
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-indigo-600">OneKMS</h1>
+    <a href="#signup" class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+      Get Early Access
+    </a>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="text-center px-6 py-24 relative z-10">
-    <h2 class="text-6xl font-bold leading-tight max-w-4xl mx-auto">
-      Stop Managing 3 KMS Systems.
-      <br />
-      <span class="text-blue-400">Use One.</span>
-    </h2>
-    <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-      Replace AWS KMS, GCP KMS, and Azure Key Vault with one unified control plane.
-    </p>
+<!-- HERO -->
+<section class="text-center py-20 px-6">
+  <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    Observability for Encryption Keys Across Clouds
+  </h1>
+  <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+    Unified visibility, risk detection, and actionable insights for AWS, GCP, and Azure KMS.
+  </p>
+  <a href="#signup" class="bg-indigo-600 text-white px-6 py-3 rounded-xl shadow hover:bg-indigo-700">
+    Get Early Access
+  </a>
+</section>
 
-    <form id="waitlist-form" class="mt-10 flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Enter your work email"
-        class="w-full px-5 py-3 rounded-lg text-black focus:outline-none"
-      />
-      <button type="submit" class="bg-blue-500 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
-        Join Waitlist
-      </button>
-    </form>
-    <p class="mt-3 text-sm text-gray-500">No spam. Only product updates.</p>
-    <p id="form-message" class="mt-4 text-sm"></p>
-  </section>
+<!-- PROBLEM -->
+<section class="bg-white py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Multi-Cloud Key Management is Broken</h2>
+  <p class="text-gray-600 max-w-2xl mx-auto">
+    No unified visibility. Rotation issues go unnoticed. Problems are found only during audits.
+  </p>
+</section>
 
-  <!-- Problem Section -->
-  <section class="py-20 px-8 text-center">
-    <h3 class="text-3xl font-semibold">Multi-cloud encryption is broken</h3>
-    <p class="mt-6 text-gray-400 max-w-3xl mx-auto">
-      Teams struggle with fragmented KMS systems, inconsistent policies, and operational overhead across clouds.
-    </p>
-  </section>
+<!-- SOLUTION -->
+<section class="py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">OneKMS Fixes This</h2>
+  <p class="text-gray-600 max-w-2xl mx-auto">
+    Get a single view of all keys across clouds. Detect risks early. Take action instantly.
+  </p>
+</section>
 
-  <!-- Solution Section -->
-  <section class="grid md:grid-cols-3 gap-8 px-10 py-20">
-    <div class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition">
-      <h3 class="text-xl font-semibold">Unified Control Plane</h3>
-      <p class="mt-3 text-gray-400">Manage all keys and policies from one place.</p>
+<!-- FEATURES -->
+<section class="bg-white py-16 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+    <div>
+      <h3 class="font-bold text-lg mb-2">Unified Visibility</h3>
+      <p class="text-gray-600">All keys across AWS, GCP, Azure</p>
     </div>
-    <div class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition">
-      <h3 class="text-xl font-semibold">Policy Everywhere</h3>
-      <p class="mt-3 text-gray-400">Define once, enforce across all clouds.</p>
+    <div>
+      <h3 class="font-bold text-lg mb-2">Risk Detection</h3>
+      <p class="text-gray-600">Find rotation gaps, unused keys</p>
     </div>
-    <div class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition">
-      <h3 class="text-xl font-semibold">Developer First</h3>
-      <p class="mt-3 text-gray-400">Simple APIs, fast integration.</p>
+    <div>
+      <h3 class="font-bold text-lg mb-2">Actionable Alerts</h3>
+      <p class="text-gray-600">Slack & Jira integrations</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Architecture Visual -->
-  <section class="text-center py-20">
-    <h3 class="text-3xl font-semibold">Built for Multi-Cloud</h3>
-    <div class="mt-10 flex justify-center gap-10 text-gray-400">
-      <div>AWS</div>
-      <div>→</div>
-      <div class="text-white font-bold">OneKMS</div>
-      <div>←</div>
-      <div>GCP</div>
-      <div>←</div>
-      <div>Azure</div>
-    </div>
-  </section>
+<!-- SIGNUP FORM -->
+<section id="signup" class="py-20 px-6 text-center bg-indigo-600 text-white">
+  <h2 class="text-3xl font-bold mb-6">Get Early Access</h2>
+  <p class="mb-8">Be the first to try OneKMS</p>
 
-  <!-- CTA -->
-  <section class="text-center py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-    <h2 class="text-4xl font-bold">Be first to simplify encryption</h2>
-    <button class="mt-6 bg-white text-black px-6 py-3 rounded-lg hover:scale-105 transition">Book Demo</button>
-  </section>
+  <form 
+    action="https://formspree.io/f/xgodydpn" 
+    method="POST" 
+    class="max-w-md mx-auto space-y-4"
+  >
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Your Name" 
+      required 
+      class="w-full px-4 py-3 rounded-lg text-black"
+    />
 
-  <!-- Footer -->
-  <footer class="text-center py-10 text-gray-600">
-    © 2026 OneKMS. All rights reserved.
-  </footer>
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your Email" 
+      required 
+      class="w-full px-4 py-3 rounded-lg text-black"
+    />
 
-  <script>
-    const form = document.getElementById('waitlist-form');
-    const message = document.getElementById('form-message');
+    <input 
+      type="text" 
+      name="company" 
+      placeholder="Company (optional)" 
+      class="w-full px-4 py-3 rounded-lg text-black"
+    />
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = form.email.value;
+    <button 
+      type="submit" 
+      class="w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold"
+    >
+      Join Waitlist
+    </button>
+  </form>
+</section>
 
-      try {
-        await fetch('https://formspree.io/f/xgodydpn', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-
-        message.textContent = 'You\'re in. We\'ll be in touch.';
-        form.reset();
-      } catch (err) {
-        message.textContent = 'Something went wrong. Try again.';
-      }
-    });
-  </script>
+<!-- FOOTER -->
+<footer class="bg-white py-6 text-center text-gray-500">
+  © 2026 OneKMS — Encryption Key Observability
+</footer>
 
 </body>
 </html>
